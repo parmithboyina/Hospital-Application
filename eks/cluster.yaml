@@ -3,7 +3,7 @@ kind: ClusterConfig
 
 metadata:
   name: hospital-eks
-  region: us-east-2
+  region: ap-south-1
   version: "1.30"
 
 iam:
@@ -14,7 +14,7 @@ managedNodeGroups:
     instanceType: t3.small
     desiredCapacity: 1
     minSize: 1
-    maxSize: 1
+    maxSize: 2
     volumeSize: 20
 
 addons:
