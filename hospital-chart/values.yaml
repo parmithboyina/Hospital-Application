@@ -1,0 +1,23 @@
+replicaCount: 2
+
+image:
+  repository: yash2172/hospital-app
+  tag: "1.0.0"
+
+service:
+  type: LoadBalancer
+  port: 80
+
+env:
+  MONGO_URI: mongodb://mongodb-service:27017/hospital_management
+  PORT: "5000"
+  NODE_ENV: production
+
+secrets:
+  SESSION_SECRET: hospital123
+  JWT_SECRET: hospitaljwt123
+  ADMIN_USERNAME: admin
+  ADMIN_PASSWORD: admin123
+
+storage:
+  size: 5Gi
